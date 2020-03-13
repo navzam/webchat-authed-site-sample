@@ -28,9 +28,9 @@ const strategy = new OIDCStrategy({
     identityMetadata: 'https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration',
     clientID: AAD_CLIENT_ID,
     clientSecret: AAD_CLIENT_SECRET,
-    responseType: 'code', // DEFAULT? OR SHOULD ALSO HAVE ID TOKEN?
+    responseType: 'code',
     responseMode: 'query',
-    redirectUrl: 'http://localhost:3000/redirect', // ENV VAR?
+    redirectUrl: 'http://localhost:3000/redirect',
     allowHttpForRedirectUrl: true, // allows for localhost testing
     validateIssuer: false, // allow users from all tenants to sign in
     scope: ['profile'],
